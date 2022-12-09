@@ -54,7 +54,7 @@ class Api {
   }
   async cities() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/cities.json`, this.headers);
+      const responce = await axios.get(`${this.url}/data/en-GB/cities.json`);
       return responce.data;
     } catch (err) {
       console.log(err);
@@ -63,7 +63,7 @@ class Api {
   }
   async airlines() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/airlines.json`, this.headers);
+      const responce = await axios.get(`${this.url}/data/en-GB/airlines.json`);
       return responce.data;
     } catch (err) {
       console.log(err);
