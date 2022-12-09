@@ -29,9 +29,7 @@ class Api {
           headers: {
             'X-Access-Token': 'e3d5607a29a777706e816c35b5591ee9',
             'Access-Control-Allow-Origin': '*',
-            'Accept-Encoding': 'gzip, deflate, br',
             'Accept': '*/*',
-            'Connection': 'keep-alive',
             'Content-Type': 'application/json;charset=utf-8',
           }
         }
@@ -59,7 +57,6 @@ class Api {
   async cities() {
     try {
       const responce = await axios.get(`${this.url}/data/en-GB/cities.json`, {
-        params: params,
         headers: this.headers
       });
       return responce.data;
@@ -71,7 +68,6 @@ class Api {
   async airlines() {
     try {
       const responce = await axios.get(`${this.url}/data/en-GB/airlines.json`, {
-        params: params,
         headers: this.headers
       });
       return responce.data;
