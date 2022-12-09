@@ -21,7 +21,10 @@ class Api {
       //     headers: this.headers
       //   }
       // );
-      const responce = await axios.get(`https://api.travelpayouts.com/aviasales_resources/v3/countries.json`);
+      const responce = await axios.get(`https://api.travelpayouts.com/aviasales_resources/v3/countries.json`,
+        {
+          headers: this.headers
+        });
       return responce.data;
     } catch (err) {
       console.log(err);
