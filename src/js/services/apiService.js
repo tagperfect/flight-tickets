@@ -26,12 +26,7 @@ class Api {
       const responce = await axios.get(
         `${this.url}/data/en-GB/countries.json`,
         {
-          headers: {
-            'X-Access-Token': 'e3d5607a29a777706e816c35b5591ee9',
-            'Access-Control-Allow-Origin': '*',
-            'Accept': '*/*',
-            'Content-Type': 'application/json;charset=utf-8',
-          }
+          headers: this.headers
         }
       );
       // {
