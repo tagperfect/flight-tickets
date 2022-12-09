@@ -14,7 +14,7 @@ class Api {
     this.headers = config.headers;
     this.config = {
       method: 'get',
-      url: 'http://api.travelpayouts.com/data/en-GB/countries.json',
+      url: 'https://api.travelpayouts.com/data/en-GB/countries.json',
       headers: {
         'X-Access-Token': 'e3d5607a29a777706e816c35b5591ee9'
       }
