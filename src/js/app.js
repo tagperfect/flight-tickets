@@ -4,12 +4,13 @@
 // api.cities().then(res => console.log(res));
 import '../css/style.css';
 import './plugins'
+import config from "./config/apiConfig";
 import locations from "./store/locations";
 import formUI from './views/form';
 import currencyUI from './views/currency';
 import ticketsUI from './views/tickets';
-import favorites from './store/favorites'
-import favUI from './views/favUI'
+import favorites from './store/favorites';
+import favUI from './views/favUI';
 
 document.addEventListener('DOMContentLoaded', () => {
   initApp();
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const depart_date = formUI.departDateValue;
     const return_date = formUI.returnDateValue;
     const currency = currencyUI.currencyValue;
+    const token = config.token;
     // CODE, CODE , DATE, DATE
     console.log(origin, destination, depart_date, return_date);
     await locations.fetchTickets({
@@ -61,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       depart_date,
       return_date,
       currency,
+      token
     });
     // location.fetchTickets();
     ticketsUI.renderTickets(locations.lastSearch);

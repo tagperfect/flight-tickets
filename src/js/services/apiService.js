@@ -23,7 +23,7 @@ class Api {
       // );
       const responce = await axios.get(`https://api.travelpayouts.com/aviasales_resources/v3/countries.json`,
         {
-          headers: this.headers
+          params: { token: this.token }
         });
       return responce.data;
     } catch (err) {
@@ -70,8 +70,7 @@ class Api {
   async prices(params) {
     try {
       const responce = await axios.get(`${this.url}/v1/prices/cheap`, {
-        params: params,
-        headers: this.headers
+        params: params
       });
       return responce.data;
     } catch (err) {
