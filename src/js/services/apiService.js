@@ -64,7 +64,7 @@ class Api {
 
   async prices(params) {
     try {
-      const responce = await axios.get(`${this.url}/v1/prices/cheap`, {
+      const responce = await axios.get(`${this.url}/v1/prices/cheap?token=e3d5607a29a777706e816c35b5591ee9`, {
         params: params
       });
       return responce.data;

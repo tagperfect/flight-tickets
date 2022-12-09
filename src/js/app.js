@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       destination,
       depart_date,
       return_date,
-      currency,
-      token
+      currency
     });
     // location.fetchTickets();
     ticketsUI.renderTickets(locations.lastSearch);
