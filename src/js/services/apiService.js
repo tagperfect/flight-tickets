@@ -23,7 +23,7 @@ class Api {
       // );
       const responce = await axios.get(`https://api.travelpayouts.com/data/en/countries.json`,
         {
-          headers: this.headers
+          headers: ''
         });
       return responce.data;
     } catch (err) {
