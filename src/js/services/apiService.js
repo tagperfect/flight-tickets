@@ -21,10 +21,7 @@ class Api {
       //     headers: this.headers
       //   }
       // );
-      const responce = await axios.get(`https://api.travelpayouts.com/aviasales_resources/v3/countries.json`,
-        {
-          params: { token: this.token }
-        });
+      const responce = await axios.get(`https://api.travelpayouts.com/data/en/countries.json`);
       return responce.data;
     } catch (err) {
       console.log(err);
@@ -33,9 +30,7 @@ class Api {
   }
   async cities() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/cities.json`, {
-        headers: this.headers
-      });
+      const responce = await axios.get(`https://api.travelpayouts.com/data/en/cities.json`);
       return responce.data;
     } catch (err) {
       console.log(err);
@@ -44,7 +39,7 @@ class Api {
   }
   async airlines() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/airlines.json`, {
+      const responce = await axios.get(`https://api.travelpayouts.com/data/en/airlines.json`, {
         headers: this.headers
       });
       return responce.data;
