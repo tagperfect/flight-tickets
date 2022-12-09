@@ -15,21 +15,22 @@ class Api {
   }
   async countries() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/countries.json`, { 
-        'X-Access-Token': 'e3d5607a29a777706e816c35b5591ee9'
+      const responce = await axios.get(`${this.url}/data/en-GB/countries.json`, {
+        'X-Access-Token': 'e3d5607a29a777706e816c35b5591ee9',
+        'Access-Control-Allow-Origin': '*',
       });
-        // {
-        // const responce = await axios.get(`https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json`, {
+      // {
+      // const responce = await axios.get(`https://pkgstore.datahub.io/core/world-cities/world-cities_json/data/5b3dd46ad10990bca47b04b4739a02ba/world-cities_json.json`, {
       //   headers: {
       //   'Content-Type': 'application/json;charset=utf-8',
-        // 'Access-Control-Allow-Origin': '*',
-        // 'User-Agent': 'PostmanRuntime/7.29.2',
+      // 'Access-Control-Allow-Origin': '*',
+      // 'User-Agent': 'PostmanRuntime/7.29.2',
       //   'Accept-Encoding': 'gzip, deflate, br',
       //   Accept: '*/*',
       //   "Connection": 'keep-alive',
       //   "X-Access-Token": this.token,
 
-        // }
+      // }
       // }
       // );
       return responce.data;
