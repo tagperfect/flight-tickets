@@ -6,7 +6,7 @@ const config = {
   // maker: 399405,
   headers: {
     'Content-Type': 'application/json;charset=utf-8',
-    // 'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Origin': '*',
     // 'User-Agent': 'PostmanRuntime/7.29.2',
     'Accept-Encoding': 'gzip, deflate, br',
     Accept: '*/*',
