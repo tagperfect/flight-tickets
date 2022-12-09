@@ -22,8 +22,7 @@ class Api {
   }
   async countries() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/countries.json`);
-      // const responce = await axios(config);
+      const responce = await axios(this.config);
       // const responce = await axios.get(`${this.url}/data/en-GB/countries.json`, {
       //   'X-Access-Token': 'e3d5607a29a777706e816c35b5591ee9',
       //   'Access-Control-Allow-Origin': '*',
@@ -54,7 +53,7 @@ class Api {
   }
   async cities() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/cities.json`);
+      const responce = await axios.get(`${this.url}/data/en-GB/cities.json`, this.headers);
       return responce.data;
     } catch (err) {
       console.log(err);
@@ -63,7 +62,7 @@ class Api {
   }
   async airlines() {
     try {
-      const responce = await axios.get(`${this.url}/data/en-GB/airlines.json`);
+      const responce = await axios.get(`${this.url}/data/en-GB/airlines.json`, this.headers);
       return responce.data;
     } catch (err) {
       console.log(err);
